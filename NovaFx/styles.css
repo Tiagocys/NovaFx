@@ -1,5 +1,5 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 * {
     margin: 0;
@@ -20,6 +20,11 @@ a {
 }
 
 .pares {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     font-family: Afacad;
     display: flex;
     overflow: hidden;
@@ -42,9 +47,21 @@ a {
 }
 
 nav {
-    display: flex;
-    margin-top: 10px;
+    display: fixed;
+    position: fixed;
+    top: 20px;
+    right: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255, 0.8);
+    padding-bottom: 10px;
+    height: 60px;
 }
+
+nav a {
+    position: fixed;
+    top: 20px;
+}
+
 
 nav img {
     max-width: 200px;
@@ -58,9 +75,10 @@ nav button {
     font-size: 25px;
     border: none;
     border-radius: 5px 0 0 5px;
-
     cursor: pointer;
-    margin-top: 20px;
+    position: fixed;
+    right: 0;
+    top: 37px;
 }
 
 nav button:hover {
@@ -70,6 +88,9 @@ nav button:hover {
 @media (max-width:400px) {
     nav img {
         width: 150px;
+    }
+    nav {
+        height: 40px;
     }
     nav button {
         padding-left: 10px;
@@ -124,14 +145,14 @@ nav button:hover {
 }
 .header-txt div button {
     margin-top: 20px;
-    width: 170px;
+    width: 200px;
     font-size: 25px;
     cursor: pointer;
     border-radius: 10px;
     padding: 10px;
     
 }
-.real {
+.mt4 {
     background-color: #26914a;
     border: #26914a 1px solid;
     color: white;
@@ -139,6 +160,9 @@ nav button:hover {
 }
 .demo {
     background-color: white;
+    border: 1px solid #1e8f1e;
+
+    
 }
 .header-img {
     max-width: 40%;
@@ -152,27 +176,50 @@ nav button:hover {
     border-bottom: 1px solid black;
 }
 
-.algo-bg {
-    background-color: #26914a17;
-}
-.algo {
-    margin: 40px auto;
-    max-width: 750px;
-    display: block;
-    padding: 50px 20px;
-    color: black;
-}
-.algo h1 {
-    font-size: 40px;
+
+@media (max-width:1150px) {
+    .algo-bg {
+        height: 300px;
+    }
+    .algo h1 {
+        font-size: 30px;
+    }
+    .algo p, .algo span {
+        font-size: 20px;
+    }
 }
 
-.algo span, .algo p {
-    font-size: 25px;
-    margin-top: 10px;
+@media (max-width:870px) {
+    .algo-img {
+        margin: auto;
+        display: block;
+    }
+
+    .algo-bg {
+        height: auto;
+    }
+
 }
-.algo span {
-    color: #26914a;
-    font-weight: bold;
+@media (max-width:600px) {
+    .algo-bg {
+        flex-direction: column;
+    }
+    .algo-bg img {
+        order: 2;
+        width: 70%;
+    }
+    .algo {
+        order: 1;
+        width: 70%;
+    }
+
+}
+
+@media (max-width:450px) {
+    .algo, .algo-bg img {
+        width: 90%;
+    }
+    
 }
 
 @media (max-width:940px) {
@@ -226,7 +273,7 @@ nav button:hover {
     }
 
     .header-txt div button {
-        width: 120px;
+        width: 200px;
         margin: 10px 5px auto auto;
         font-size: 18px;
     }
@@ -262,72 +309,89 @@ nav button:hover {
     } 
 }
 
-.licença {
-    max-width: 800px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-.licença-h1 {
-    font-size: 40px;
+.bg-licença h1 {
     text-align: center;
-    margin-bottom: 20px;
-}
-
-.passos div {
-    margin-bottom: 20px;
 }
 
 
-
-.passo1 h1, .passo2 h1, .passo3 h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.passo1 button {
-    height: 30px;
-    border-radius: 20px;
-    border: 1px solid #26914a;
-    font-size: 20px;
+.licença {
+    max-width: 780px;
     margin: auto;
-    background-color: white;
-    padding: 0 20px;
-    margin-top: 10px;
-}
-
-.passo1 button:hover {
-    background-color: #26914a;
-    color: white;
-    cursor: pointer;
-    
-}
-
-.passo1 p, .passo2 p, .passo3 p {
-    font-size: 20px;
-}
-
-
-.wtsp-a {
-    margin: 20px auto;
-    height: 30px;
-    border: 1px solid #26914a;
-    font-size: 25px;
-    padding: 5px 10px 10px;
+    padding: 0 10px;
     display: flex;
-    width: 150px;
+}
+
+@media (max-width:770px) {
+    .licença {
+        display: block;
+    }
+    .preço {
+        height: auto;
+    }
+
+}
+
+.planos {
+    margin: auto;
     border-radius: 20px;
+    border: 1px solid #1e8f1e;
+
+}
+.planos h3, .planos h2 {
+    text-align: center;
+}
+.preço {
+    height: 60px;
+    margin: auto;
+}
+
+.preço h3 {
+    text-decoration: line-through;
+    color: rgb(97, 97, 97);
+}
+
+.preço h2 {
     color: #1e8f1e;
 }
 
-.wtsp {
-    width: 30px;
-    margin: auto;;
+
+.planos button {
+    max-width: 200px;
+    font-size: 20px;
+    margin: 10px auto;
+    display: block;    
 }
 
-.wtsp-a:hover {
-    background-color: #26914a4d;
+
+.planos div {
+    margin: auto 10px;
+    padding: 10px;
+
 }
+.planos div div {
+    display: flex;
+    margin: 10px auto;
+}
+
+.planos p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto auto auto 10px;
+}
+
+.planos img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width:762px) {
+    .planos {
+        display: flex;
+    }
+}
+
+
+
 
 footer {
     text-align: center;
@@ -358,7 +422,7 @@ footer h4 {
     border-radius: 20px;
     padding: 20px;
     margin: auto;
-    max-width: 800px;
+    max-width: 720px;
 }
 
 .aviso h1 {
@@ -367,4 +431,144 @@ footer h4 {
 
 .aviso h2 {
     margin-top: 10px;
+}
+
+.redes {
+    max-width: 260px;
+    display: flex;
+    margin: 10px auto;
+}
+
+.redes a {
+    display: block;
+    margin: auto;
+}
+
+.redes img {
+    display: block;
+    max-width: 50px;
+    margin: auto;
+}
+
+
+/*******-parceiro-*******/
+
+.licença-parceiro {
+    max-width: 800px;
+    margin: 100px auto auto auto;
+    padding: 0 20px;
+}
+
+.licença-parceiro-h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.passos div {
+    margin-bottom: 20px;
+}
+
+
+.passo1 button {
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid #26914a;
+    font-size: 20px;
+    margin: auto;
+    background-color: white;
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+.passo1 button:hover {
+    background-color: #26914a;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.passo1 p, .passo2 p, .passo3 p {
+    font-size: 20px;
+}
+
+.formulário-parceiro {
+    max-width: 400px;
+    margin: auto;
+}
+
+.formulário-parceiro form {
+    display: block;
+    margin: auto;
+}
+
+.formulário-parceiro form input, .formulário-parceiro button {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    margin: auto auto 20px auto;
+}
+
+.formulário-parceiro input[type="checkbox"] {
+    width: 20px;
+    margin: auto 10px auto auto;
+}
+
+.checkbox {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.checkbox a {
+    color: #1e8f1e;
+}
+
+.h-captcha {
+    margin: auto;
+    width: 280px;
+}
+
+.obrigado {
+    margin-top: 120px;
+    text-align: center;
+}
+
+/*-------Termos de uso-------*/
+
+.termos {
+    margin: 140px auto auto auto;
+    max-width: 800px;
+    padding: 20px;
+
+}
+.termos p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.termos h1 {
+    text-align: center;
+    
+}
+
+.sob-demanda {
+    margin: 140px auto auto auto;
+}
+
+.sob-demanda h1 {
+    text-align: center;
+}
+
+
+/*Sob Demanda*/
+
+.sob-demanda {
+    max-width: 800px;
+}
+
+.sob-demanda p {
+    font-size: 20px;
+    margin: 20px auto;
+    padding: 10px;
 }

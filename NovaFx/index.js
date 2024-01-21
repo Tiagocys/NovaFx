@@ -343,3 +343,11 @@ function abrirVideo(){
     }
 
 }
+
+var algotradingVideo = document.getElementById('algotrading-video');
+
+algotradingVideo.addEventListener('click',abrirYoutube);
+
+function abrirYoutube(){
+    window.open('https://youtu.be/lMGDfflHvgQ', '_blank');
+}
