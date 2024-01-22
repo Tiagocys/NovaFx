@@ -309,7 +309,7 @@ nav button:hover {
     } 
 }
 
-.bg-licença h1 {
+.bg-licença {
     text-align: center;
 }
 
@@ -321,15 +321,7 @@ nav button:hover {
     display: flex;
 }
 
-@media (max-width:770px) {
-    .licença {
-        display: block;
-    }
-    .preço {
-        height: auto;
-    }
 
-}
 
 .planos {
     margin: auto;
@@ -343,6 +335,9 @@ nav button:hover {
 .preço {
     height: 60px;
     margin: auto;
+}
+.preço h1 {
+    text-align: center;
 }
 
 .preço h3 {
@@ -384,13 +379,25 @@ nav button:hover {
     height: 20px;
 }
 
-@media (max-width:762px) {
+.planos button {
+    background-color: #1e8f1e;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media (max-width:770px) {
+    .licença {
+        display: block;
+    }
+    .preço {
+        height: auto;
+    }
     .planos {
-        display: flex;
+        margin-bottom: 10px;
     }
 }
-
-
 
 
 footer {
@@ -572,3 +579,6 @@ footer h4 {
     margin: 20px auto;
     padding: 10px;
 }
+
+
+/*-------novo------*/
