@@ -344,10 +344,10 @@ function abrirVideo(){
 
 }
 
-var algotradingVideo = document.getElementById('algotrading-video');
+var concurso = document.getElementById('concurso');
 
-algotradingVideo.addEventListener('click',abrirYoutube);
+concurso.addEventListener('click',abrirYoutube);
 
 function abrirYoutube(){
-    window.open('https://youtu.be/lMGDfflHvgQ', '_blank');
+    window.open('https://youtu.be/U-D4mAziEAg', '_blank');
 }
